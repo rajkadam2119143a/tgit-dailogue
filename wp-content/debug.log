@@ -1,0 +1,179 @@
+[05-Jun-2026 23:52:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_strtoupper() in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/inc/editorial-queries.php:205
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php(498): tgit_quarterly_initials_from_title()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php(461): tgit_generate_recognition_slide_html()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/shortcodes.php(434): tgit_recognition_slider_shortcode()
+#3 [internal function]: do_shortcode_tag()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-includes/shortcodes.php(273): preg_replace_callback()
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/template-parts/section-recognition.php(57): do_shortcode()
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-includes/template.php(812): require('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/wp-includes/template.php(745): load_template()
+#8 /home/bccladmin/bccl/tgit_dialo in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/inc/editorial-queries.php on line 205
+[05-Jun-2026 23:52:21 UTC] Automatic updates starting...
+[05-Jun-2026 23:52:22 UTC]   Automatic plugin updates starting...
+[05-Jun-2026 23:52:22 UTC]   Automatic plugin updates complete.
+[05-Jun-2026 23:52:23 UTC]   Automatic theme updates starting...
+[05-Jun-2026 23:52:23 UTC]   Automatic theme updates complete.
+[05-Jun-2026 23:52:23 UTC] Automatic updates complete.
+[05-Jun-2026 23:52:23 UTC] PHP Notice:  maintenance_mode(): Could not access filesystem. in /home/bccladmin/bccl/tgit_dialogue/wp-includes/functions.php on line 6121
+[06-Jun-2026 00:07:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_strtoupper() in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/inc/editorial-queries.php:205
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php(498): tgit_quarterly_initials_from_title()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php(461): tgit_generate_recognition_slide_html()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/shortcodes.php(434): tgit_recognition_slider_shortcode()
+#3 [internal function]: do_shortcode_tag()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-includes/shortcodes.php(273): preg_replace_callback()
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/template-parts/section-recognition.php(57): do_shortcode()
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-includes/template.php(812): require('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/wp-includes/template.php(745): load_template()
+#8 /home/bccladmin/bccl/tgit_dialo in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/inc/editorial-queries.php on line 205
+[07-Jun-2026 13:15:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_strtoupper() in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/inc/editorial-queries.php:217
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php(498): tgit_quarterly_initials_from_title()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php(461): tgit_generate_recognition_slide_html()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/shortcodes.php(434): tgit_recognition_slider_shortcode()
+#3 [internal function]: do_shortcode_tag()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-includes/shortcodes.php(273): preg_replace_callback()
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/template-parts/section-recognition.php(57): do_shortcode()
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-includes/template.php(812): require('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/wp-includes/template.php(745): load_template()
+#8 /home/bccladmin/bccl/tgit_dialo in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/inc/editorial-queries.php on line 217
+[07-Jun-2026 13:15:06 UTC] WordPress database error Table 'dialogue.wp_e_submissions' doesn't exist for query 
+			SELECT s.id FROM `wp_e_submissions` s
+			WHERE s.status = 'trash' AND s.updated_at_gmt < '2026-05-08 13:15:06';
+		 made by do_action_ref_array('wp_scheduled_delete'), WP_Hook->do_action, WP_Hook->apply_filters, ElementorPro\Modules\Forms\Submissions\Component->ElementorPro\Modules\Forms\Submissions\{closure}, ElementorPro\Modules\Forms\Submissions\Component->scheduled_submissions_delete, ElementorPro\Modules\Forms\Submissions\Database\Query->get_trashed_submission_ids_to_delete
+[07-Jun-2026 13:15:07 UTC] Automatic updates starting...
+[07-Jun-2026 13:15:08 UTC]   Automatic plugin updates starting...
+[07-Jun-2026 13:15:08 UTC]   Automatic plugin updates complete.
+[07-Jun-2026 13:15:09 UTC]   Automatic theme updates starting...
+[07-Jun-2026 13:15:09 UTC]   Automatic theme updates complete.
+[07-Jun-2026 13:15:09 UTC] Automatic updates complete.
+[07-Jun-2026 13:15:09 UTC] PHP Notice:  maintenance_mode(): Could not access filesystem. in /home/bccladmin/bccl/tgit_dialogue/wp-includes/functions.php on line 6121
+[07-Jun-2026 16:35:22 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 681
+[07-Jun-2026 16:36:13 UTC] PHP Fatal error:  Uncaught Error: Class 'apiAuthentication' not found in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php:621
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(324): check_login_user()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/bccladmin/bccl/tgit_dialogue/wp-settings.php(727): do_action()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-config.php(117): require_once('/home/bccladmin...')
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-load.php(50): require_once('/home/bccladmin...')
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-blog-header.php(13): require_once('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/index.php(17): require('/home/bccladmin...')
+#8 {main}
+  thrown in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 621
+[07-Jun-2026 16:36:20 UTC] PHP Fatal error:  Uncaught Error: Class 'apiAuthentication' not found in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php:621
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(324): check_login_user()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/bccladmin/bccl/tgit_dialogue/wp-settings.php(727): do_action()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-config.php(117): require_once('/home/bccladmin...')
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-load.php(50): require_once('/home/bccladmin...')
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-blog-header.php(13): require_once('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/index.php(17): require('/home/bccladmin...')
+#8 {main}
+  thrown in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 621
+[07-Jun-2026 16:36:27 UTC] PHP Fatal error:  Uncaught Error: Class 'apiAuthentication' not found in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php:621
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(324): check_login_user()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/bccladmin/bccl/tgit_dialogue/wp-settings.php(727): do_action()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-config.php(117): require_once('/home/bccladmin...')
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-load.php(50): require_once('/home/bccladmin...')
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-blog-header.php(13): require_once('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/index.php(17): require('/home/bccladmin...')
+#8 {main}
+  thrown in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 621
+[07-Jun-2026 16:37:00 UTC] PHP Fatal error:  Uncaught Error: Class 'apiAuthentication' not found in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php:621
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(324): check_login_user()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/bccladmin/bccl/tgit_dialogue/wp-settings.php(727): do_action()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-config.php(117): require_once('/home/bccladmin...')
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-load.php(50): require_once('/home/bccladmin...')
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-blog-header.php(13): require_once('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/index.php(17): require('/home/bccladmin...')
+#8 {main}
+  thrown in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 621
+[07-Jun-2026 16:37:23 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 681
+[07-Jun-2026 16:38:19 UTC] PHP Fatal error:  Uncaught Error: Class 'apiAuthentication' not found in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php:621
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(324): check_login_user()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/bccladmin/bccl/tgit_dialogue/wp-settings.php(727): do_action()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-config.php(117): require_once('/home/bccladmin...')
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-load.php(50): require_once('/home/bccladmin...')
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-blog-header.php(13): require_once('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/index.php(17): require('/home/bccladmin...')
+#8 {main}
+  thrown in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 621
+[07-Jun-2026 16:38:59 UTC] PHP Fatal error:  Uncaught Error: Class 'apiAuthentication' not found in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php:621
+Stack trace:
+#0 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(324): check_login_user()
+#1 /home/bccladmin/bccl/tgit_dialogue/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/bccladmin/bccl/tgit_dialogue/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/bccladmin/bccl/tgit_dialogue/wp-settings.php(727): do_action()
+#4 /home/bccladmin/bccl/tgit_dialogue/wp-config.php(117): require_once('/home/bccladmin...')
+#5 /home/bccladmin/bccl/tgit_dialogue/wp-load.php(50): require_once('/home/bccladmin...')
+#6 /home/bccladmin/bccl/tgit_dialogue/wp-blog-header.php(13): require_once('/home/bccladmin...')
+#7 /home/bccladmin/bccl/tgit_dialogue/index.php(17): require('/home/bccladmin...')
+#8 {main}
+  thrown in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 621
+[07-Jun-2026 16:39:24 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 681
+[07-Jun-2026 16:41:25 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 681
+[07-Jun-2026 16:42:42 UTC] Missing firstName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:42:42 UTC] Missing surname for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:42:42 UTC] Missing emailId for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:42:42 UTC] Missing branchName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:42:42 UTC] Missing locationName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:42:42 UTC] Missing designation for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:42:42 UTC] Missing deptGroupName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:42:42 UTC] Missing sapNumber for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:42:42 UTC] Missing managerEmailID for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing firstName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing surname for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing emailId for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing branchName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing locationName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing designation for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing deptGroupName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing sapNumber for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing managerEmailID for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:17 UTC] Missing c_in for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:43:26 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 699
+[07-Jun-2026 16:44:53 UTC] Missing firstName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing surname for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing emailId for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing branchName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing locationName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing designation for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing deptGroupName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing sapNumber for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing managerEmailID for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:44:53 UTC] Missing c_in for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing firstName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing surname for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing emailId for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing branchName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing locationName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing designation for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing deptGroupName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing sapNumber for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:45:19 UTC] Missing managerEmailID for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing firstName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing surname for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing emailId for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing branchName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing locationName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing designation for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing deptGroupName for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing sapNumber for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:19 UTC] Missing managerEmailID for user = c-raj.kadam@timesofindia.com
+[07-Jun-2026 16:46:23 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 699
+[07-Jun-2026 16:48:24 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 699
+[07-Jun-2026 16:50:25 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 699
+[07-Jun-2026 16:52:26 UTC] PHP Warning:  Cannot modify header information - headers already sent in /home/bccladmin/bccl/tgit_dialogue/wp-content/themes/tgit-quarterly/functions.php on line 699

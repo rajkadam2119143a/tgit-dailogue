@@ -1,0 +1,245 @@
+<?php
+/**
+ * Theme functions file
+ */
+
+/**
+ * Enqueue parent theme styles first
+ * Replaces previous method using @import
+ * <http://codex.wordpress.org/Child_Themes>
+ */
+
+add_action( 'wp_enqueue_scripts', 'jevelin_child_enqueue', 99 );
+
+function jevelin_child_enqueue() {
+	wp_enqueue_style( 'jevelin-child-style', get_stylesheet_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'jevelin-child-owlcarouselcss', get_stylesheet_directory_uri() . '/css/owl.carousel.min.css' );
+	//wp_enqueue_script( 'jevelin-child-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'),'',false );
+	wp_enqueue_script( 'jevelin-child-owlcarouseljs', get_stylesheet_directory_uri() . '/js/owl.carousel.min.js', array('jquery'),'',false );
+}
+
+add_action( 'admin_enqueue_scripts', 'jevelin_child_admin_enqueue', 99 );
+function jevelin_child_admin_enqueue() {
+	wp_enqueue_style( 'jevelin-admin-style', get_stylesheet_directory_uri() . '/admin-style.css' );
+}
+
+/*Portfolio Custom Shortcode*/
+function portfolioShortcode(){
+	// WP_Query arguments
+	$args = array(
+		'post_type'         => array( 'fw-portfolio' ),
+		'post_status' 		=> array( 'publish' ),
+		'posts_per_page' 	=> -1,
+	);
+	// The Query
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) {
+		?>
+		<div id="purpose_sub_slider" class="owl-carousel subslider pupose-sub-section-slide">
+		<?php
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+			$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full', false );
+			?>
+			
+			<div class="item">								
+				<div class="category-art  sh-portfolio-masonry2 sh-portfolio-overlay-style-overlay4" >
+
+							<div class="sh-portfolio-image">
+					<div class="sh-portfolio-image-position">
+													
+        <div class="sh-ratio">
+            <div class="sh-ratio-container sh-ratio-container-square">
+                <div class="sh-ratio-content" style="background-image: url(<?php echo $thumbnail[0]; ?>);"></div>
+            </div>
+        </div>											</div>
+
+					
+											<div class="sh-portfolio-overlay sh-portfolio-overlay4">
+					
+													
+								<div class="sh-portfolio-overlay4-container">
+
+																			<div class="sh-portfolio-overlay4-title">
+											<?php echo get_the_title(); ?>										</div>
+																			
+									<div class="sh-portfolio-overlay4-icons sh-table">
+
+																	                <a href="<?php echo get_the_permalink(); ?>" class="sh-overlay-item sh-table-cell">
+							                    <div class="sh-overlay-item-container">
+							                        <i class="icon-link"></i>
+							                    </div>
+							                </a>
+						                
+						                <a href="<?php echo $thumbnail[0]; ?>" class="sh-overlay-item sh-table-cell" rel="lightbox">
+						                    <div class="sh-overlay-item-container">
+						                        <i class="icon-magnifier-add"></i>
+						                    </div>
+						                </a>
+
+									</div>
+								</div>
+				</div>
+					
+
+				</div>
+			
+			
+			
+		</div>
+			</div>
+
+	<?php
+		}
+		?>
+		</div>
+		<?php
+		/* Restore original Post Data */
+		wp_reset_postdata();
+	} else {
+		// no posts found
+	}
+}
+add_shortcode('portfolio-carousel', 'portfolioShortcode');
+
+/*Portfolio Custom Shortcode*/
+function tgitstarsShortcode(){
+	// WP_Query arguments
+	$args = array(
+		'post_type'         => array( 'tgitstars' ),
+		'post_status' 		=> array( 'publish' ),
+		'posts_per_page' 	=> -1,
+	);
+	// The Query
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) {
+		?>
+		<div id="tgitstar_sub_slider" class="owl-carousel star tgitstar-sub-section-slide">
+		<?php
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+			$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full', false );
+			?>
+			
+	<div class="item">								
+		<div class="sh-column">
+			<div class="sh-column-wrapper">
+				<div class="sh-team sh-team-style4 sh-team-social-standard" id="team_<?php echo get_the_ID(); ?>">
+					<div class="sh-team-image">
+						<a href="<?php echo $thumbnail[0]; ?>" class="" rel="lightbox">
+						<img src="<?php echo $thumbnail[0]; ?>" alt="">
+						</a>
+					</div>
+						<div class="sh-team-aside">
+						<div class="sh-team-name">
+							<h3><?php echo get_the_title(); ?></h3>
+						</div>
+					<div class="sh-team-role"><?php echo get_the_excerpt(); ?></div>
+					<div class="sh-team-description">
+						<?php echo get_the_content(); ?></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php
+		}
+		?>
+		</div>
+		<?php
+		/* Restore original Post Data */
+		wp_reset_postdata();
+	} else {
+		// no posts found
+	}
+}
+add_shortcode('tgitstar-carousel', 'tgitstarsShortcode');
+
+function myscript() {
+?>
+<script type="text/javascript">
+  if ( undefined !== window.jQuery ) {
+    // script dependent on jQuery
+	/**/
+	jQuery('#purpose_sub_slider').owlCarousel({
+		loop: true,
+		autoplay:true,
+		autoplayHoverPause:true,
+		margin: 10,
+		responsiveClass: true,
+		nav: true,
+		rewind:true,
+		navText: ['<i class="ti-arrow-left"></i>','<i class="ti-arrow-right"></i>'],
+		responsive: {
+		0: {
+			items: 1,
+			nav: true
+		},
+		600: {
+			items: 3,
+			nav: true
+		},
+		1000: {
+			items: 4,
+			nav: true,
+			loop: false,
+			margin: 0
+		}
+		}
+	});
+	
+	jQuery('#tgitstar_sub_slider').owlCarousel({
+		loop: true,
+		autoplay:true,
+		autoplayHoverPause:true,
+		margin: 10,
+		responsiveClass: true,
+		nav: true,
+		rewind:true,
+		navText: ['<i class="ti-arrow-left"></i>','<i class="ti-arrow-right"></i>'],
+		responsive: {
+		0: {
+			items: 1,
+			nav: true,
+			dots:false,
+			loop: true
+		},
+		600: {
+			items: 2,
+			nav: true,
+			dots:false,
+			loop: true
+		},
+		1000: {
+			items: 3,
+			nav: true,
+			loop: true,
+			margin: 0
+		}
+		}
+	});
+  }
+  var h = jQuery('.showmore_contentclass')[0].scrollHeight;	
+	jQuery('.custom_showmore_divarea a').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		console.log(h);
+		jQuery('.showmore_contentclass').animate({
+			'height': h
+		})
+	});
+
+	jQuery(document).click(function() {
+		jQuery('.showmore_contentclass').animate({
+			'height': '360px'
+		})
+	});
+</script>
+<?php
+}
+add_action( 'wp_footer', 'myscript' );

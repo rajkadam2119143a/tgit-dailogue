@@ -1,0 +1,15 @@
+/*
+Theme Name: TGIT Quarterly
+Theme URI: https://example.com
+Author: IT Department
+Description: Editorial “IT Quarterly” front-end ported from the Lovable React UI. Standalone PHP, Tailwind-compiled CSS, and vanilla JS — no React runtime.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tgit-quarterly
+*/
+
+/* Front-end styles are loaded from assets/css/editorial.css via functions.php. */

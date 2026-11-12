@@ -1,0 +1,13 @@
+tr.plugin-update-tr {
+    display: none !important;
+}
+
+/* Menu editor - add scroll for long menus (e.g. Archive with many sub-items) */
+#menu-to-edit,
+.menu-item-edit-active .menu-item-transport {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+.menu-edit .menu-item-settings {
+    max-height: none;
+}

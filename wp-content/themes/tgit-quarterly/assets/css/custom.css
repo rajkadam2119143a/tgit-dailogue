@@ -1,0 +1,639 @@
+/* Media elements responsive sizing */
+img, video {
+	max-width: 100%;
+	height: auto;
+	max-height: 400px;
+}
+
+.carousel {
+	width: 100%;
+	position: relative;
+}
+
+.carousel-wrapper {
+	position: relative;
+	min-height: 300px;
+}
+
+.carousel-inner {
+	width: 100%;
+	min-height: 100%;
+}
+
+.carousel-item {
+	display: none;
+	width: 100%;
+}
+
+.carousel-item.active {
+	display: block;
+	animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.carousel-indicators {
+	margin-top: 1.5rem;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 1.5rem;
+}
+
+.carousel-indicators li {
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	display: inline-block;
+}
+
+.carousel-indicators li.active {
+	background-color: hsl(var(--primary));
+}
+
+.carousel-indicators li:not(.active):hover {
+	background-color: hsl(var(--muted-foreground));
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	cursor: pointer;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 20;
+	background-color: white;
+	border: 1px solid #e5e7eb;
+	border-radius: 9999px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+	left: 0.5rem;
+}
+
+.carousel-control-next {
+	right: 0.5rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+	background-color: hsl(var(--primary));
+	color: white;
+}
+
+.tgit-recognition-slider {
+	width: 100%;
+}
+
+.tgit-recognition-slide-row {
+	display: flex;
+	gap: 1.5rem;
+	align-items: stretch;
+	justify-content: center;
+}
+
+.tgit-recognition-slide-row .tgit-recognition-slide {
+	flex: 0 0 calc((100% - 3rem) / 3);
+	max-width: calc((100% - 3rem) / 3);
+	min-width: 0;
+}
+
+.tgit-recognition-carousel-mobile .carousel-control-prev,
+.tgit-recognition-carousel-mobile .carousel-control-next {
+	display: none;
+}
+
+.tgit-recognition-mobile-slide {
+	width: 100%;
+}
+
+.tgit-recognition-mobile-slide .tgit-recognition-slide {
+	width: 100%;
+	max-width: none;
+}
+
+.tgit-project-detail-shell {
+	background: linear-gradient(180deg, hsl(var(--secondary) / 0.2) 0%, hsl(var(--background)) 36%);
+}
+
+.tgit-project-breadcrumb-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.tgit-project-breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.55rem;
+}
+
+.tgit-project-nav {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.tgit-project-nav-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 1px solid hsl(var(--editorial-border));
+	border-radius: 9999px;
+	background: hsl(var(--background));
+	color: hsl(var(--muted-foreground));
+	transition: all 0.25s ease;
+}
+
+.tgit-project-nav-btn:hover {
+	border-color: hsl(var(--primary));
+	background: hsl(var(--secondary));
+	color: hsl(var(--foreground));
+}
+
+.tgit-project-top {
+	display: grid;
+	align-items: start;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 2.5rem;
+}
+
+.tgit-project-media-col,
+.tgit-project-content-col {
+	min-width: 0;
+}
+
+.tgit-project-image-panel {
+	border: 1px solid hsl(var(--editorial-border));
+	background: hsl(var(--background));
+	padding: 1.25rem;
+}
+
+.tgit-project-main-image,
+.tgit-project-image-fallback {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	background: hsl(var(--secondary) / 0.6);
+}
+
+.tgit-project-image-fallback {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tgit-project-inline-tags {
+	margin-top: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.project-card.is-over-limit {
+	display: none;
+}
+
+.tgit-spotlight-card {
+	overflow: hidden;
+}
+
+.tgit-spotlight-card-image {
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+	background: hsl(var(--secondary) / 0.35);
+	border-bottom: 1px solid hsl(var(--editorial-border));
+}
+
+.tgit-project-see-all-wrap {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.tgit-project-see-all-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 180px;
+	padding: 0.9rem 1.75rem;
+	border: 1px solid hsl(var(--foreground) / 0.14);
+	border-radius: 9999px;
+	background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.2) 100%);
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: hsl(var(--foreground));
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.tgit-project-see-all-btn:hover {
+	transform: translateY(-1px);
+	border-color: hsl(var(--primary) / 0.45);
+	background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.45) 100%);
+	box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.tgit-project-copy {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 100%;
+	max-width: none;
+	min-width: 0;
+}
+
+.tgit-project-meta-row {
+	display: flex;
+	align-items: center;
+	gap: 0.875rem;
+}
+
+.tgit-project-description {
+	padding-bottom: 1rem;
+	width: 100%;
+	max-width: none;
+	min-width: 0;
+	word-break: normal;
+	overflow-wrap: break-word;
+	border-bottom: 1px solid hsl(var(--editorial-border));
+}
+
+.tgit-project-description p,
+.tgit-project-description div,
+.tgit-project-description li {
+	max-width: none;
+}
+
+.tgit-project-business-line {
+	font-family: Open Sans, sans-serif;
+	font-size: 0.875rem;
+	line-height: 1.7;
+	color: hsl(var(--muted-foreground));
+}
+
+.tgit-project-business-line strong {
+	color: hsl(var(--foreground));
+	margin-right: 0.3rem;
+}
+
+.tgit-project-metrics-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+	gap: 1rem;
+	padding-top: 0.5rem;
+}
+
+.tgit-project-metric {
+	padding: 1rem;
+	border: 1px solid hsl(var(--editorial-border));
+	background: hsl(var(--secondary) / 0.2);
+}
+
+.tgit-project-comments-wrap {
+	padding: 1rem 0 4.5rem;
+}
+
+.tgit-project-comments-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 2rem;
+	align-items: start;
+}
+
+.tgit-project-comments-form-col,
+.tgit-project-comments-list-col {
+	min-width: 0;
+}
+
+.tgit-project-comment-form {
+	border: 1px solid hsl(var(--editorial-border));
+	background: hsl(var(--background));
+	padding: 1.5rem;
+	width: 100%;
+}
+
+[data-comments-list] > div {
+	border-color: hsl(var(--editorial-border));
+	padding: 1.5rem;
+	background: hsl(var(--background));
+	border: 1px solid hsl(var(--editorial-border));
+	width: 100%;
+}
+
+[data-comments-list] {
+	width: 100%;
+}
+
+.tgit-related-projects {
+	border-top: 1px solid hsl(var(--editorial-border));
+}
+
+.tgit-related-card-image {
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+	border-bottom: 1px solid hsl(var(--editorial-border));
+	background: hsl(var(--secondary) / 0.45);
+}
+
+.tgit-related-card {
+	overflow: hidden;
+}
+
+@media (max-width: 767px) {
+	.tgit-project-breadcrumb-row {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.tgit-project-nav {
+		align-self: flex-end;
+	}
+
+	.tgit-project-comments-wrap {
+		padding-top: 0;
+	}
+}
+
+@media (min-width: 1024px) {
+	.tgit-project-top {
+		grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+		column-gap: 4rem;
+	}
+
+	.tgit-project-copy {
+		padding-left: 1.5rem;
+		padding-right: 0;
+	}
+
+	.tgit-project-comments-grid {
+		grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.9fr);
+		gap: 2.5rem;
+	}
+}
+
+/* My Project Blog — front-end submission */
+.tgit-project-submit-alert {
+	margin-bottom: 1.5rem;
+	padding: 1rem 1.25rem;
+	border: 1px solid hsl(var(--editorial-border));
+	font-family: inherit;
+	font-size: 0.875rem;
+}
+
+.tgit-project-submit-alert--success {
+	background: #edf7ef;
+	border-color: #b7dfc1;
+	color: #1f4d2c;
+}
+
+.tgit-project-submit-alert--error {
+	background: #fdf0f0;
+	border-color: #efc2c2;
+	color: #7a1f1f;
+}
+
+.tgit-project-submit-layout {
+	margin-bottom: 3rem;
+}
+
+.tgit-project-submit-form {
+	border: 1px solid hsl(var(--editorial-border));
+	background: hsl(var(--background));
+	padding: 1.5rem;
+}
+
+.tgit-project-submit-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.tgit-project-submit-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 1.25rem;
+}
+
+.tgit-project-submit-field--full {
+	margin-bottom: 1.25rem;
+}
+
+.tgit-project-submit-field label {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: hsl(var(--foreground));
+}
+
+.tgit-required {
+	color: hsl(var(--accent));
+}
+
+.tgit-project-submit-counter,
+.tgit-project-submit-note {
+	font-size: 0.75rem;
+	color: hsl(var(--muted-foreground));
+}
+
+.tgit-project-submit-input,
+.tgit-project-submit-textarea,
+.tgit-project-submit-filename {
+	width: 100%;
+	border: 1px solid hsl(var(--editorial-border));
+	background: hsl(var(--background));
+	padding: 0.75rem 1rem;
+	font-size: 0.875rem;
+	color: hsl(var(--foreground));
+}
+
+.tgit-project-submit-textarea {
+	min-height: 180px;
+	resize: vertical;
+}
+
+.tgit-project-submit-upload-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	cursor: pointer;
+	border: 1px solid hsl(var(--primary));
+	background: hsl(var(--primary));
+	color: hsl(var(--primary-foreground));
+	padding: 0.55rem 1.25rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.tgit-project-submit-upload-btn input {
+	display: none;
+}
+
+.tgit-project-submit-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 0.5rem;
+}
+
+.tgit-project-submit-button {
+	border: 0;
+	background: hsl(var(--primary));
+	color: hsl(var(--primary-foreground));
+	padding: 0.85rem 1.75rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.tgit-project-submit-required-note {
+	margin: 0;
+	font-size: 0.75rem;
+	color: hsl(var(--muted-foreground));
+}
+
+.tgit-project-submit-card-image {
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	border-bottom: 1px solid hsl(var(--editorial-border));
+	background: hsl(var(--secondary) / 0.45);
+}
+
+.tgit-project-submit-list {
+	padding-top: 2rem;
+	border-top: 1px solid hsl(var(--editorial-border));
+}
+
+@media (min-width: 768px) {
+	.tgit-project-submit-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.tgit-project-submit-form {
+		padding: 2rem;
+	}
+}
+
+/* Primary nav dropdown (e.g. Archive) */
+.menu-item-has-children {
+	position: relative;
+}
+
+.menu-item-has-children > a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+}
+
+.menu-item-has-children > a::after {
+	content: "";
+	width: 0.5rem;
+	height: 0.5rem;
+	border-right: 1.5px solid currentColor;
+	border-bottom: 1.5px solid currentColor;
+	transform: rotate(45deg);
+	transition: transform 0.2s ease;
+	margin-top: -0.15rem;
+}
+
+.menu-item-has-children.is-open > a::after {
+	transform: rotate(-135deg);
+	margin-top: 0.15rem;
+}
+
+.menu-item-has-children > .sub-menu {
+	display: none;
+	position: absolute;
+	top: calc(100% + 1rem);
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 40;
+	list-style: none;
+	margin: 0;
+	min-width: 220px;
+	max-height: 320px;
+	overflow-y: auto;
+	padding: 0.75rem 0;
+	background: hsl(var(--foreground));
+	border-radius: 0.25rem;
+	box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+}
+
+.menu-item-has-children.is-open > .sub-menu {
+	display: block;
+}
+
+.menu-item-has-children > .sub-menu li a {
+	display: block;
+	padding: 0.6rem 1.5rem;
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.8rem;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: hsl(var(--background));
+	white-space: nowrap;
+	transition: background-color 0.15s ease;
+}
+
+.menu-item-has-children > .sub-menu li a:hover {
+	background: hsl(var(--background) / 0.12);
+}
+
+#editorial-mobile-nav .menu-item-has-children > a::after {
+	display: none;
+}
+
+#editorial-mobile-nav .menu-item-has-children > .sub-menu {
+	display: flex;
+	position: static;
+	transform: none;
+	flex-direction: column;
+	gap: 0.5rem;
+	max-height: none;
+	overflow: visible;
+	background: none;
+	box-shadow: none;
+	padding: 0.5rem 0 0 1rem;
+}
+
+#editorial-mobile-nav .menu-item-has-children > .sub-menu li a {
+	padding: 0.35rem 0;
+	color: inherit;
+	text-transform: none;
+	font-weight: 400;
+}
+
+
+
